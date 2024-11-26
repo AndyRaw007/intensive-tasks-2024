@@ -25,7 +25,7 @@ public class Task5 {
     static double getAreaByHeron(double a, double b, double c) {
         //        Место для вашего кода
 
-        return 0; // Заглушка. При реализации - удалить
+        return 0; //  Заглушка. При реализации - удалить
     }
 
     /**
