@@ -28,7 +28,7 @@ package com.walking.intensive.chapter2.task7;
 public class Task7 {
     public static void main(String[] args) {
 //        Для собственных проверок можете делать любые изменения в этом методе
-        System.out.println(getFriendlyPair(12));
+        System.out.println(getFriendlyPair(497));
     }
 
     static int getFriendlyPair(int n) {
@@ -36,14 +36,18 @@ public class Task7 {
         if (n <= 0 || n >= 1000000) {
             return -1;
         }
-        int t = 0, i;
-        for (i = 2; i <= n / 2; i++) {
-            if (n % i == 0) {
-                t = t + i;
+        int t = 0, i, k = 0, p;
+        for (i = n; i <= 2; i--) {
+            for (i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    t = t + i;
+                }
+                t = t + 1;
             }
-            //System.out.println(t);
+        //for ()
         }
-        return t + 1;
+        return t;
+
     }
 }
 /*
