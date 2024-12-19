@@ -28,10 +28,40 @@ package com.walking.intensive.chapter2.task7;
 public class Task7 {
     public static void main(String[] args) {
 //        Для собственных проверок можете делать любые изменения в этом методе
+        System.out.println(getFriendlyPair(12));
     }
 
     static int getFriendlyPair(int n) {
         // Ваш код
-        return 0;
+        if (n <= 0 || n >= 1000000) {
+            return -1;
+        }
+        int t = 0, i;
+        for (i = 2; i <= n / 2; i++) {
+            if (n % i == 0) {
+                t = t + i;
+            }
+            //System.out.println(t);
+        }
+        return t + 1;
     }
 }
+/*
+import java.util.Scanner;
+
+public class PrimeNum2 {
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number :  ");
+        long num = scanner.nextInt(), i;
+        System.out.print("Divisors of " + num + " = 1 , ");
+        for (i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                System.out.print(i + " , ");
+            }
+        }
+        System.out.println(num);
+        scanner.close();
+    }
+}
+ */
